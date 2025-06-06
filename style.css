@@ -18,11 +18,11 @@
 }
 
 body {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
-    height: 100vh;
+    /* height: 100vh; */
 
     padding: 20px;
     text-align: center;
@@ -32,6 +32,8 @@ body {
 
 .container {
     max-width: 600px;
+    margin: 0 auto;
+    padding-top: 60px;
     animation: fadeInUp .8s ease-out;
 }
 
@@ -84,6 +86,35 @@ p {
 
 .social-links i:hover {
     color: var(--destaque);
+}
+
+section#projetos {
+    margin-top: 80px;
+}
+
+.project-card {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: var(--text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: var(--destaque);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: var(--text);
+    text-decoration: underline;
 }
 
 @keyframes fadeInUp {
