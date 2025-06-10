@@ -3,7 +3,7 @@
     --second-color: #3282b8;
     --destaque: #f9a826;
     --background: #1b262c;
-    --text: #ffffff;
+    --text: #bbe1fa;
 
     --title-font: 'Poppins';
     --text-font: 'Roboto';
@@ -14,26 +14,23 @@
     padding: 0;
     box-sizing: border-box;
 
-    color: var(--text);
+    color: #fff;
 }
 
 body {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
-    /* height: 100vh; */
-
     padding: 20px;
     text-align: center;
     background: var(--background);
     font-family: var(--title-font);
 }
 
+header#home {
+    padding-top: 70px;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 60px;
     animation: fadeInUp .8s ease-out;
 }
 
@@ -52,7 +49,7 @@ h1 {
 
 p {
     font-size: 1.2rem;
-    color: var(--second-color);
+    color: var(--text);
     font-family: var(--text-font);
     margin-bottom: 30px;
 }
@@ -78,7 +75,6 @@ p {
 
 .social-links i {
     margin: 0 10px;
-    color: var(--text);
     font-size: 1.5rem;
     text-decoration: none;
     transition: color .3s;
@@ -88,7 +84,7 @@ p {
     color: var(--destaque);
 }
 
-section#projetos {
+section {
     margin-top: 80px;
 }
 
@@ -115,6 +111,45 @@ section#projetos {
 .project-card a {
     color: var(--text);
     text-decoration: underline;
+}
+
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--destaque);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.skills i {
+    font-size: 3rem;
+    transition: color .8s;
+}
+
+.skills i:hover {
+    color: var(--destaque);
 }
 
 @keyframes fadeInUp {
