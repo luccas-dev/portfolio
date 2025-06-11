@@ -152,6 +152,39 @@ h2 {
     color: var(--destaque);
 }
 
+.contato-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--second-color);
+    color: var(--text);
+    border-radius: 8px;
+    transition: all .3s ease;
+}
+
+.contato-links a i {
+    color: var(--text);
+}
+
+.contato-links a:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+
+.contato-links a:hover i {
+    color: #fff;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
