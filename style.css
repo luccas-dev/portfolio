@@ -228,8 +228,31 @@ footer {
 }
 
 @media(max-width: 450px) {
+    .button {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    header#home h1 {
+        font-size: 2rem;
+    }
+
+    header#home p {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 600px) {
     .about {
         text-align: justify;
+    }
+
+    header#home {
+        padding: 50px 20px 30px;
+    }
+
+    section {
+        padding: 0 20px;
     }
 }
 
