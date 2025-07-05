@@ -113,12 +113,24 @@ section {
 
 .project-card p {
     color: var(--text);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .project-card a {
+    padding: 10px 15px;
+    border: 2px solid var(--second-color);
+    border-radius: 8px;
     color: var(--text);
-    text-decoration: underline;
+    text-decoration: none;
+    transition: background-color .5s;
+}
+
+.project-card a:hover {
+    background-color: var(--second-color);
+}
+
+.project-card a + a {
+    margin-left: 15px;
 }
 
 .about {
