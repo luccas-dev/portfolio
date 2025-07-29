@@ -1,5 +1,5 @@
 const title = document.getElementById("typed")
-const text = "Olá, eu sou o Lucas!"
+const text = "Desenvolvedor Front-end"
 let idx = 0
 
 function type() {
