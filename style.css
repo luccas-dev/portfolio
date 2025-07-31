@@ -115,7 +115,10 @@ a {
     }
 
     #projects {
-        margin-top: 56px;
+
+        h2 {
+            margin-bottom: 56px;
+        }
 
         .projectCard {
             background: var(--second-color);
