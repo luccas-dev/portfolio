@@ -26,6 +26,15 @@ body {
     font-family: var(--title-font);
 }
 
+a {
+    text-decoration: none;
+    transition: color .5s;
+
+    &:hover {
+        color: var(--destaque);
+    }
+}
+
 .container {
     animation: fadeInUp .8s ease-out;
 
@@ -33,11 +42,10 @@ body {
 }
 
 #header {
-    max-width: 600px;
-    margin: 0 auto;
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .container {
         display: flex;
@@ -66,6 +74,7 @@ body {
         }
 
         p {
+            max-width: 600px;
             font-size: 0.875rem;
             font-weight: 100;
         }
@@ -94,12 +103,18 @@ body {
 }
 
 #main {
-    #projects {
+    .container {
+        margin-bottom: 144px;
+    }
+
+    section > div {
         display: grid;
         grid-template-columns: repeat(3, 330px);
         justify-content: center;
         gap: 24px;
+    }
 
+    #projects {
         margin-top: 56px;
 
         .projectCard {
@@ -112,32 +127,79 @@ body {
                 padding: 12px;
             }
 
-            .text {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-
-                text-align: left;
-                padding: 12px; 
-
-                a {
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: color .5s;
-
-                    &:hover {
-                        color: var(--destaque);
-                    }
-                }
-
-                p {
-                    font: 200 14px/140% var(--text-font);
-                }
-            }
-
             &:hover {
                 transform: translateY(-10px);
             }
+        }
+    }
+
+    #services {
+        background: #0D0E11;
+        padding-block: 120px;
+
+        .serviceCard {
+            border-radius: 12px;
+            border: 3px solid #16181D;
+            padding: 20px;
+            margin-top: 56px;
+
+            display: grid;
+
+            .text {
+                padding-top: 20px;
+                padding-inline: 0;
+            }
+        }
+    }
+
+    #contact {
+        #links {
+            grid-template: repeat(4, 68px)/400px;
+            gap: 16px;
+            margin-top: 48px;
+
+            .button {
+                display: grid;
+                grid-template: 
+                "logo link arrow" 1fr/36px 2fr 36px;
+                align-items: center;
+                gap: 12px;
+
+                background: #292C34;
+                border-radius: 8px;
+                padding: 20px;
+
+                img:nth-child(1) {
+                    grid-area: logo;
+                }
+
+                a {
+                    grid-area: link;
+                    justify-self: left;
+                }
+
+                img:nth-child(3) {
+                    grid-area: arrow;
+                    justify-self: end;
+                }
+            }
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        text-align: left;
+        padding: 12px; 
+
+        a {
+            font-weight: 600;
+        }
+
+        p {
+            font: 200 14px/140% var(--text-font);
         }
     }
 }
