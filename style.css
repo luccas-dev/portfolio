@@ -124,10 +124,12 @@ a {
             background: var(--second-color);
             border-radius: 12px;
             transition: transform .5s ease-in-out;
+            padding: 12px;
 
             img {
                 border-radius: 8px;
-                padding: 12px;
+                margin-bottom: 12px;
+                width: 100%;
             }
 
             &:hover {
@@ -193,10 +195,8 @@ a {
     .text {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-
         text-align: left;
-        padding: 12px; 
+        gap: 8px;
 
         a {
             font-weight: 600;
