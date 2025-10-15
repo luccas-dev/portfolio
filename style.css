@@ -30,7 +30,7 @@ a {
     text-decoration: none;
     transition: color .5s;
 
-    &:hover {
+    &:hover, &:hover span {
         color: var(--destaque);
     }
 }
@@ -176,9 +176,10 @@ a {
                     grid-area: logo;
                 }
 
-                a {
+                span {
                     grid-area: link;
                     justify-self: left;
+                    transition: color .5s;
                 }
 
                 img:nth-child(3) {
