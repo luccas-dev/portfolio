@@ -41,6 +41,13 @@ a {
     text-align: center;
 }
 
+.section-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
 #header {
     height: 100vh;
     display: flex;
@@ -81,8 +88,10 @@ a {
 
         #techs {
             display: flex;
+            flex-flow: wrap;
+            justify-content: center;
             gap: 16px;
-            margin-top: 20px;
+            margin-block: 20px;
 
             .tags {
                 display: flex;
@@ -104,14 +113,7 @@ a {
 
 #main {
     .container {
-        margin-bottom: 144px;
-    }
-
-    section > div {
-        display: grid;
-        grid-template-columns: repeat(3, 330px);
-        justify-content: center;
-        gap: 24px;
+        margin-bottom: 80px;
     }
 
     #projects {
@@ -121,6 +123,7 @@ a {
         }
 
         .projectCard {
+            width: 320px;
             background: var(--second-color);
             border-radius: 12px;
             transition: transform .5s ease-in-out;
@@ -139,14 +142,22 @@ a {
     }
 
     #services {
-        background: #0D0E11;
-        padding-block: 120px;
+        padding-block: 60px 100px;
 
-        .serviceCard {
+        &.container {
+            background: #0D0E11;
+        }
+
+        & h2 {
+            margin-bottom: 32px;
+        }
+
+        & .serviceCard {
+            width: 300px;
             border-radius: 12px;
             border: 3px solid #16181D;
             padding: 20px;
-            margin-top: 56px;
+            margin-top: 24px;
 
             display: grid;
 
@@ -159,11 +170,15 @@ a {
 
     #contact {
         #links {
-            grid-template: repeat(4, 68px)/400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 16px;
             margin-top: 48px;
 
             .button {
+                width: 100%;
+                max-width: 500px;
                 display: grid;
                 grid-template: 
                 "logo link arrow" 1fr/36px 2fr 36px;
@@ -217,5 +232,54 @@ a {
     to {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding-inline: 12px;
+    }
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    #main {
+        & #services {
+            padding-block: 48px;
+
+            & .serviceCard {
+                width: 280px;
+                margin-top: 0;
+                padding: 12px;
+            }
+        }
+
+        & #projects {
+            & .projectCard {
+                width: 280px;
+            }
+        }
+
+        & .container {
+            margin-bottom: 56px;
+        }
+    }
+
+    #header {
+        & .container {
+            & .avatar {
+                width: 140px;
+                margin-bottom: 20px;
+            }
+
+            & h1 {
+                font-size: 2rem;
+            }
+
+            & p {
+                font-size: 0.81rem;
+            }
+        }
     }
 }
